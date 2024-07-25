@@ -19,7 +19,6 @@ python3 -m venv virtualenv
 
 # 2. Install dependency
 pip install -r requirements/local.txt
-./manage.py migrate
 
 # 3. Migrate database
 $ ./manage.py migrate
