@@ -51,7 +51,7 @@ class Transaction(models.Model):
 
 @receiver(post_save, sender=Product)
 def check_quantity_min(sender, instance, created, **kwargs):
-    if instance.quantity < instance.quantity_min:
+    if instance.quantity < instance.min_quantity:
         
         send_sms_to_admin(instance.product_name, instance.quantity_min)
 

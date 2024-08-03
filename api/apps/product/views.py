@@ -24,7 +24,7 @@ class ListCreateProductView(ListCreateAPIView):
         return Product.objects.all()
 
     def create(self, request, *args, **kwargs):
-        serializer = CarSerializer(data=request.data)
+        serializer = ProductSerializer(data=request.data)
 
         if serializer.is_valid():
             serializer.save()
